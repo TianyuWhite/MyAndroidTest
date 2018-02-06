@@ -1,5 +1,7 @@
 package com.example.dell.activitytest;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,7 +23,15 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View view) {
                // Toast.makeText(FirstActivity.this, "You clicked Button 1", Toast.LENGTH_SHORT).show();
                 //销毁活动
-                finish();
+                //finish();
+                //显示Intent的用法
+                //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                //基本隐式Intent的用法
+                // Intent intent = new Intent("com.example.dell.activitytest.ACTION_START");
+                //intent.addCategory("com.example.dell.activitytest.MY_CATEGORY");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                startActivity(intent);
             }
         });
     }
