@@ -26,9 +26,14 @@ public class FirstActivity extends AppCompatActivity {
         });
     }
 
-    public boolean onCreatOptionsMenu(Menu menu){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    public FirstActivity() {
+        super();
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
