@@ -29,8 +29,11 @@ public class FirstActivity extends AppCompatActivity {
                 //基本隐式Intent的用法
                 // Intent intent = new Intent("com.example.dell.activitytest.ACTION_START");
                 //intent.addCategory("com.example.dell.activitytest.MY_CATEGORY");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                //更多隐式Intent用法，如弹出选择方式
+                //Intent intent = new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse("http://www.baidu.com"));
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse( "tel:10086"));
                 startActivity(intent);
             }
         });

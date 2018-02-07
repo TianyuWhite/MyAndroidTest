@@ -29,7 +29,8 @@
             <intent-filter>
                 <action android:name="com.example.dell.activitytest.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="http" />
+               <!-- <data android:scheme="http" /> -->
+                <data android:scheme="tel" />
             </intent-filter>
         </activity>
     </application>
