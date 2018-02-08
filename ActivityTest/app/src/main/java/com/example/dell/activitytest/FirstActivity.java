@@ -26,15 +26,29 @@ public class FirstActivity extends AppCompatActivity {
                 //finish();
                 //显示Intent的用法
                 //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                //startActivity(intent);
                 //基本隐式Intent的用法
                 // Intent intent = new Intent("com.example.dell.activitytest.ACTION_START");
                 //intent.addCategory("com.example.dell.activitytest.MY_CATEGORY");
+                //startActivity(intent);
                 //更多隐式Intent用法，如弹出选择方式
                 //Intent intent = new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("http://www.baidu.com"));
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse( "tel:10086"));
-                startActivity(intent);
+                //startActivity(intent);
+                //点击按钮出来拨号盘
+                //Intent intent = new Intent(Intent.ACTION_DIAL);
+                //intent.setData(Uri.parse( "tel:10086"));
+                //startActivity(intent);
+                //向下一个活动传递数据
+                //String data = "Hello SecondActivity";
+                //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);   //显示调用Intent
+                //intent.putExtra("extra_data", data);    //putExtra()中两个参数，第一个参数为键，用于后面从Intent中取值，
+                                                                                      // 第二个参数为传递的数值
+                //startActivity(intent);
+
+                //返回数据给上一个活动
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);   //显示调用Intent
+                startActivityForResult(intent, 1); //1为请求码，用于在之后的回调中判断数据的来源
             }
         });
     }
