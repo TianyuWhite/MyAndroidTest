@@ -22,9 +22,17 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();   //Intent仅用于传递数据
                 intent.putExtra("data_return", "HelloFirstActivity");
-                setResult(RESULT_OK, intent);   //setResult()专门用于向上一活动返回数据，第一参数用于向上一个活动返回处理结果，第二参数把带有数据的Intent传递回去 
+                setResult(RESULT_OK, intent);   //setResult()专门用于向上一活动返回数据，第一参数用于向上一个活动返回处理结果，第二参数把带有数据的Intent传递回去
                 finish();
             }
         });
+    }
+
+    //若不重写这个方法，则在back键返回时就不打印日志，只有单单依靠按钮返回打印
+    public void onBackPressed(){
+        Intent intent = new Intent();
+        intent.putExtra("data_return", "Hello FirstActivity");
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }

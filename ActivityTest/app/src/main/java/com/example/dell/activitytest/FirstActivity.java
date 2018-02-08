@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,6 +75,21 @@ public class FirstActivity extends AppCompatActivity {
             default:
         }
         return true;
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        //第一个参数requestCode，即在启动活动时传入请求码
+        //第二个参数resultCode，返回数据时传入的处理结果
+        //第三个参数data，携带返回数据的Intent
+        switch(requestCode){
+            case 1:
+                if(resultCode == RESULT_OK){
+                    String returnedData = data.getStringExtra("data_retrun");
+                    Log.d("FirstActivity", returnedData);
+                }
+                break;
+            default:
+        }
     }
 
 }
