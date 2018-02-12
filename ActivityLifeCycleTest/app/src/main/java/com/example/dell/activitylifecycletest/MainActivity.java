@@ -63,4 +63,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onRestart");
     }
 
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String tempData = "Something you just typed";
+        outState.putString("data_key", tempData);
+    }
+
 }
