@@ -16,6 +16,7 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("FirstActivity", this.toString());
         setContentView(R.layout.first_layout);
         //点击按钮弹出Toast触发点
         Button button1 = (Button)findViewById(R.id.button_1);
@@ -48,8 +49,16 @@ public class FirstActivity extends AppCompatActivity {
                 //startActivity(intent);
 
                 //返回数据给上一个活动
-                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);   //显示调用Intent
-                startActivityForResult(intent, 1); //1为请求码，用于在之后的回调中判断数据的来源
+                //Intent intent = new Intent(FirstActivity.this, SecondActivity.class);   //显示调用Intent
+                //startActivityForResult(intent, 1); //1为请求码，用于在之后的回调中判断数据的来源
+
+                //standard活动默认启动方式
+                //Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
+                //startActivity(intent);
+
+                //singleTop
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
     }
