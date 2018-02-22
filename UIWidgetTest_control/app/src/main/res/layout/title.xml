@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ic_launcher_background">
+    android:background="">
 
     <Button
         android:id="@+id/title_back"
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:background="ic_launcher_background"
+        android:background=""
         android:text="Back"
         android:textColor="#fff"/>
 
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="5dp"
-        android:background="@drawable/ic_launcher_background"
+        android:background=""
         android:text="Edit"
         android:textColor="#fff"/>
 </LinearLayout>
